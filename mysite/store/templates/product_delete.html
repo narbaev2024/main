@@ -1,0 +1,8 @@
+<form method="post" enctype="multipart/form-data">
+      {%csrf_token%}
+
+    <p>Are you sure you want to delete?</p>
+      <button type="submit">Yes</button>
+</form>
+
+<button><a href="{% url 'product_list' %}"> No </a> </button>

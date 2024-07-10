@@ -1,0 +1,9 @@
+
+<li>
+    {% for i in product %}
+    <p><a href="{% url 'product_detail' i.pk %}">Name: {{i.name_product}}</a></p>
+    <p><img src="{{ i.image.url }}"></p>
+    <p>Created date{{i.created_date}}</p>
+    {% endfor %}
+</li>
+<button><a href="{% url 'product_create' %}">Create</a></button>

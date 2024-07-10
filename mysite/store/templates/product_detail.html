@@ -1,0 +1,20 @@
+<form method="GET" enctype="multipart/form-data">
+    <ui>
+        <li>
+            <p>{{ product.name_product }}</p>
+            <p>{{ product.category }}</p>
+            <p>{{ product.price }}</p>
+            <p>{{ product.description }}</p>
+            <p>{{ product.active }}</p>
+            <p>{{ product.phone_number }}</p>
+            {% if product.image %}
+                <p><img src="{{ product.image.url }}"></p>
+            {% else %}
+                <p>No image</p>
+            {% endif %}
+        </li>
+    </ui>
+</form>
+<button><a href="{% url 'product_update' product.pk  %}">Update</a> </button>
+<button><a href="{% url 'product_delete' product.pk %}">Delete</a> </button>
+
